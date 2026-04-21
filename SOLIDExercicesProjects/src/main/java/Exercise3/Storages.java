@@ -1,6 +1,5 @@
 package Exercise3;
 
-// The "Fat" Interface
 interface Storage {
     void upload(String data);
     void delete(String id);
@@ -20,7 +19,6 @@ class ReadOnlyBackup implements Storage {
     }
 }
 
-// The "Problem" Manager
 class BackupManager {
     private S3Storage storage = new S3Storage();
     public void performBackup(String data) {
